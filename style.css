@@ -1,31 +1,79 @@
 body {
-    font-family: Arial;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
     text-align: center;
 }
 
+/* Title styling */
+h1 {
+    margin-top: 40px;
+    font-size: 36px;
+    color: #ff4d88;
+}
+
+p {
+    font-size: 18px;
+    color: #444;
+}
+
+/* Game container */
 .game-area {
+    background: white;
+    width: 70%;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 60px;
 }
 
+/* Draggable images */
 .draggable {
-    width: 150px;
+    width: 160px;
+    border-radius: 15px;
     cursor: grab;
+    transition: transform 0.2s ease;
 }
 
+.draggable:hover {
+    transform: scale(1.05);
+}
+
+/* College drop zone */
 #college img {
-    width: 300px;
-    border: 3px dashed black;
+    width: 320px;
+    border-radius: 15px;
+    border: 3px dashed #ffb3cc;
 }
 
+/* Hidden result */
 .hidden {
     display: none;
 }
 
+#result {
+    margin-top: 40px;
+    animation: popUp 0.5s ease;
+}
+
 #result img {
-    width: 300px;
-    margin-top: 20px;
+    width: 350px;
+    border-radius: 15px;
+}
+
+/* Cute animation */
+@keyframes popUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
