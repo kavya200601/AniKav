@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.draggable {
+    width: 150px;
+    cursor: grab;
+}
+
+#college img {
+    width: 300px;
+    border: 3px dashed black;
+}
+
+.hidden {
+    display: none;
+}
+
+#result img {
+    width: 300px;
+    margin-top: 20px;
+}
