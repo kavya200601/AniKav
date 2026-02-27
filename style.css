@@ -77,3 +77,18 @@ p {
         opacity: 1;
     }
 }
+.next-btn {
+    background-color: #ff4d88;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.next-btn:hover {
+    background-color: #ff1a66;
+    transform: scale(1.05);
+}
