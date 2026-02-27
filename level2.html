@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>LEVEL 2</h1>
+<p>You fix all my problems. No matter what.</p>
+
+<div class="game-area">
+
+    <div id="question1">
+        <h2>If Kavya is stressed = 100</h2>
+        <h2>And deadline = tomorrow</h2>
+        <h2>What is required?</h2>
+
+        <button onclick="wrongAnswer()">Sleep</button>
+        <button onclick="wrongAnswer()">Luck</button>
+        <button onclick="wrongAnswer()">Panic</button>
+        <button onclick="correctAnswer()">You</button>
+    </div>
+
+    <div id="finalReveal" class="hidden">
+        <h2>Processing solution...</h2>
+        <p id="loadingText"></p>
+    </div>
+
+    <div id="achievement" class="hidden">
+        <h2>🏆 Achievement Unlocked: Jury Night Hero</h2>
+        <p>You didn’t just solve problems.<br>You’ve always shown up to fix them.</p>
+        <img src="pop.jpg" style="width:400px; border-radius:15px;">
+    </div>
+
+</div>
+
+<script>
+
+function wrongAnswer() {
+    alert("Try again. You’re better at this.");
+}
+
+function correctAnswer() {
+    document.getElementById("question1").style.display = "none";
+    document.getElementById("finalReveal").classList.remove("hidden");
+
+    let text = document.getElementById("loadingText");
+
+    let messages = [
+        "Analyzing stress levels...",
+        "Importing patience...",
+        "Applying overnight effort...",
+        "Solution found."
+    ];
+
+    let i = 0;
+
+    let interval = setInterval(function() {
+        if(i < messages.length){
+            text.innerHTML += messages[i] + "<br>";
+            i++;
+        } else {
+            clearInterval(interval);
+            document.getElementById("finalReveal").style.display = "none";
+            document.getElementById("achievement").classList.remove("hidden");
+        }
+    }, 800);
+}
+
+</script>
+
+</body>
+</html>
