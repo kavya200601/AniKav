@@ -92,3 +92,60 @@ p {
     background-color: #ff1a66;
     transform: scale(1.05);
 }
+/* COVER PAGE STYLING */
+
+.cover-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e8, #d6f0ff);
+    text-align: center;
+}
+
+.cover-container {
+    background: white;
+    padding: 60px 80px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+}
+
+.cover-title {
+    font-size: 40px;
+    color: #ff4d88;
+    margin-bottom: 10px;
+}
+
+.cover-sub {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.start-btn {
+    background-color: #ff4d88;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #ff1a66;
+    transform: scale(1.07);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
