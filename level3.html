@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>LEVEL 3 — Certified Annoyer 🇫🇷</h1>
+<p>Your favourite hobby: Annoy Kavya.</p>
+
+<div class="game-area">
+
+    <!-- TASK 1 -->
+    <div id="task1">
+        <h2>Step 1: Show off your French.</h2>
+        <input type="text" id="frenchInput" placeholder="Type something in French...">
+        <br><br>
+        <button onclick="checkFrench()">Submit</button>
+        <p id="frenchMessage"></p>
+    </div>
+
+    <!-- TASK 2 -->
+    <div id="task2" class="hidden">
+        <h2>Step 2: Send Kavya to the gym.</h2>
+        <button onclick="gymClick()">Go to Gym 🏋️‍♀️</button>
+        <p>Gym Motivation Level: <span id="gymCount">0</span>/5</p>
+    </div>
+
+    <!-- TASK 3 -->
+    <div id="task3" class="hidden">
+        <h2>Step 3: Increase Annoy Meter.</h2>
+        <button onclick="annoyClick()">Tease Kavya 😈</button>
+        <p>Annoy Meter: <span id="annoyCount">0</span>/5</p>
+    </div>
+
+    <!-- FINAL REVEAL -->
+    <div id="finalLevel3" class="hidden">
+        <h2>🏆 Achievement Unlocked: France Menace Mode</h2>
+        <p>So I’ll let you do it today.</p>
+
+        <!-- Replace video.mp4 with your file -->
+        <video width="400" controls>
+            <source src="france.mp4" type="video/mp4">
+        </video>
+
+        <br><br>
+        <a href="level4.html">
+            <button class="next-btn">Go to Level 4 ➜</button>
+        </a>
+    </div>
+
+</div>
+
+<script>
+
+function checkFrench() {
+    let input = document.getElementById("frenchInput").value;
+    if (input.length > 2) {
+        document.getElementById("frenchMessage").innerHTML = "Wow. Show off. 🙄";
+        document.getElementById("task1").style.display = "none";
+        document.getElementById("task2").classList.remove("hidden");
+    } else {
+        document.getElementById("frenchMessage").innerHTML = "At least try 😒";
+    }
+}
+
+let gymCounter = 0;
+
+function gymClick() {
+    gymCounter++;
+    document.getElementById("gymCount").innerText = gymCounter;
+
+    if (gymCounter >= 5) {
+        document.getElementById("task2").style.display = "none";
+        document.getElementById("task3").classList.remove("hidden");
+    }
+}
+
+let annoyCounter = 0;
+
+function annoyClick() {
+    annoyCounter++;
+    document.getElementById("annoyCount").innerText = annoyCounter;
+
+    if (annoyCounter >= 5) {
+        document.getElementById("task3").style.display = "none";
+        document.getElementById("finalLevel3").classList.remove("hidden");
+    }
+}
+
+</script>
+
+</body>
+</html>
