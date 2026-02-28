@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>LEVEL 4 — Bulk Mode Activated 💪</h1>
+<p>Feed Animesh chips to build muscle.</p>
+
+<div class="game-area">
+
+    <!-- Chips -->
+    <div>
+        <img src="chips.png" id="chip1" draggable="true" class="chip">
+        <img src="chips.png" id="chip2" draggable="true" class="chip">
+        <img src="chips.png" id="chip3" draggable="true" class="chip">
+        <img src="chips.png" id="chip4" draggable="true" class="chip">
+        <img src="chips.png" id="chip5" draggable="true" class="chip">
+    </div>
+
+    <!-- Drop Zone -->
+    <div id="animeshZone">
+        <img src="thin.jpg" id="animeshImage" class="transform-img">
+    </div>
+
+</div>
+
+<p>Muscle Progress: <span id="muscleCount">0</span>/5</p>
+
+<div id="level4Reveal" class="hidden">
+    <h2>🏆 Achievement Unlocked: From Kurkure to King</h2>
+    <p>Even across 6462 kms… growth happened.</p>
+
+    <a href="level5.html">
+        <button class="next-btn">Go to Level 5 ➜</button>
+    </a>
+</div>
+
+<script>
+
+let muscleCounter = 0;
+
+const chips = document.querySelectorAll(".chip");
+const dropZone = document.getElementById("animeshZone");
+
+chips.forEach(chip => {
+    chip.addEventListener("dragstart", dragStart);
+});
+
+function dragStart(e) {
+    e.dataTransfer.setData("id", e.target.id);
+}
+
+dropZone.addEventListener("dragover", e => {
+    e.preventDefault();
+});
+
+dropZone.addEventListener("drop", e => {
+    e.preventDefault();
+
+    const id = e.dataTransfer.getData("id");
+    const chip = document.getElementById(id);
+
+    chip.style.display = "none";
+
+    muscleCounter++;
+    document.getElementById("muscleCount").innerText = muscleCounter;
+
+    if (muscleCounter >= 5) {
+        document.getElementById("animeshImage").src = "jacked.jpg";
+        document.getElementById("level4Reveal").classList.remove("hidden");
+    }
+});
+
+</script>
+
+</body>
+</html>
