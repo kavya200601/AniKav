@@ -105,18 +105,34 @@ input {
     background: linear-gradient(180deg, #ffcc00, #ff4d88);
     transition: height 0.3s ease;
 }
-/* -------- LEVEL 4 SIDE-BY-SIDE FIX -------- */
+/* -------- LEVEL 4 CLEAN LAYOUT -------- */
 
 .level4-layout {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .chips-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;     /* HORIZONTAL */
     gap: 15px;
+}
+
+.chip {
+    width: 70px;
+    cursor: grab;
+}
+
+.transform-img {
+    width: 280px;            /* Smaller image */
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+#animeshZone {
+    padding: 20px;
+    border: 3px dashed #ff4d88;
+    border-radius: 20px;
 }
