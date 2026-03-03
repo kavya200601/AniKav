@@ -85,7 +85,9 @@ let annoyCounter = 0;
 
 function annoyClick() {
     annoyCounter++;
-    document.getElementById("annoyCount").innerText = annoyCounter;
+
+    let percent = (annoyCounter / 5) * 100;
+    document.getElementById("annoyBar").style.height = percent + "%";
 
     if (annoyCounter >= 5) {
         document.getElementById("task3").style.display = "none";
