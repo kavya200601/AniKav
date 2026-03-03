@@ -16,26 +16,6 @@ p {
     font-size: 18px;
     color: #444;
 }
-/* -------- LEVEL 1 IMAGE FIX -------- */
-
-.draggable {
-    width: 160px;
-    border-radius: 15px;
-    cursor: grab;
-    transition: transform 0.2s ease;
-}
-
-.draggable:hover {
-    transform: scale(1.05);
-}
-
-#college img {
-    width: 320px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    border: 3px dashed #ffb3cc;
-}
 
 /* Base Game container (Level 1 & 4 layout) */
 .game-area {
@@ -154,4 +134,24 @@ input {
     padding: 20px;
     border: 3px dashed #ff4d88;
     border-radius: 20px;
+}
+/* -------- LEVEL 1 IMAGE FIX -------- */
+
+.draggable {
+    width: 160px;
+    border-radius: 15px;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.draggable:hover {
+    transform: scale(1.05);
+}
+
+#college img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px dashed #ffb3cc;
 }
