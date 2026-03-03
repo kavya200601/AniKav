@@ -68,15 +68,7 @@ input {
 
 /* ---------- LEVEL 3 FIX (STACK VERTICALLY ONLY THERE) ---------- */
 
-#task1,
-#task2,
-#task3,
-#finalLevel3 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 /* Gym progress bar */
 .meter {
