@@ -105,3 +105,18 @@ input {
     background: linear-gradient(180deg, #ffcc00, #ff4d88);
     transition: height 0.3s ease;
 }
+/* -------- LEVEL 4 SIDE-BY-SIDE FIX -------- */
+
+.level4-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.chips-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
