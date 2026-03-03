@@ -29,52 +29,10 @@ p {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* ---------------- DRAG IMAGES (Level 1) ---------------- */
-
-.draggable {
-    width: 160px;
-    border-radius: 15px;
-    cursor: grab;
-    transition: transform 0.2s ease;
-}
-
-.draggable:hover {
-    transform: scale(1.05);
-}
-
-#college img {
-    width: 320px;
-    border-radius: 15px;
-    border: 3px dashed #ffb3cc;
-}
-
 /* ---------------- HIDDEN ---------------- */
 
 .hidden {
     display: none;
-}
-
-/* ---------------- RESULT ANIMATION ---------------- */
-
-#result {
-    margin-top: 40px;
-    animation: popUp 0.5s ease;
-}
-
-#result img {
-    width: 350px;
-    border-radius: 15px;
-}
-
-@keyframes popUp {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
 }
 
 /* ---------------- BUTTONS ---------------- */
@@ -108,57 +66,16 @@ input {
     font-size: 16px;
 }
 
-/* ---------------- COVER PAGE ---------------- */
-
-.cover-page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #ffd6e8, #d6f0ff);
-    text-align: center;
-}
-
-.cover-container {
-    background: white;
-    padding: 60px 80px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    animation: fadeIn 1s ease;
-}
-
-.cover-title {
-    font-size: 40px;
-    color: #ff4d88;
-    margin-bottom: 10px;
-}
-
-.cover-sub {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ---------------- LEVEL 3 GYM METER ---------------- */
+/* ---------------- GYM PROGRESS BAR ---------------- */
 
 .meter {
-    width: 250px;
-    height: 20px;
-    background-color: #eee;
+    width: 300px;
+    height: 25px;
+    background-color: #ddd;
     border-radius: 20px;
-    margin: 15px auto;
+    margin: 20px auto;
     overflow: hidden;
+    border: 2px solid #ff4d88;
 }
 
 .meter-fill {
@@ -168,17 +85,18 @@ input {
     transition: width 0.3s ease;
 }
 
-/* ---------------- LEVEL 3 ANNOY GRAPH ---------------- */
+/* ---------------- ANNOY GRAPH ---------------- */
 
 .graph {
-    width: 40px;
-    height: 150px;
+    width: 50px;
+    height: 160px;
     background-color: #eee;
     border-radius: 10px;
-    margin: 20px auto;
+    margin: 25px auto;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
+    border: 2px solid #ff4d88;
 }
 
 .graph-fill {
@@ -186,24 +104,4 @@ input {
     height: 0%;
     background: linear-gradient(180deg, #ffcc00, #ff4d88);
     transition: height 0.3s ease;
-}
-
-/* ---------------- LEVEL 4 CHIPS ---------------- */
-
-.chip {
-    width: 80px;
-    margin: 10px;
-    cursor: grab;
-}
-
-.transform-img {
-    width: 300px;
-    border-radius: 20px;
-    transition: 0.4s ease;
-}
-
-#animeshZone {
-    padding: 20px;
-    border: 3px dashed #ff4d88;
-    border-radius: 20px;
 }
